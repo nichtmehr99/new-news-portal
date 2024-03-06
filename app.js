@@ -5,10 +5,11 @@ const fetchCategory = async() => {
     data.data.news_category.forEach(singleCategory => {
         // console.log(singleCategory)
         const newCategory = document.createElement('div')
+        
         newCategory.innerHTML = `
-            
+        <button class="btn">${singleCategory.category_name}</button>
         `
-
+        btnContainer.appendChild(newCategory)
     });
 }
 fetchCategory()
